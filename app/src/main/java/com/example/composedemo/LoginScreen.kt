@@ -65,7 +65,9 @@ fun Loginscreen(navController: NavController){
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        Button(onClick = { count++ }) {
+        Button(onClick = { navController.navigate(
+            Routes.NextScreen.routes + "/${username.text}/${password.text}"
+        )}) {
             Text(text = "Click me ")
         }
         Spacer(modifier = Modifier.height(20.dp))
